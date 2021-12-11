@@ -1,0 +1,89 @@
+<div class="container">
+
+  <div class="hoja">
+
+    <div class="row">
+      <div class="col col-2">
+        <div class="title">
+          <h3>Register</h3>
+        </div>
+      </div>
+    </div>
+
+    <form class="form">
+
+      <div class="form-group">
+        <div class="row">
+          <div class="col col-6">
+            <label for="nombre">Nombre</label><input type="text"
+            placeholder="Nombre" name = "nombre" class="form-control">
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="form-group">
+       <div class="row">
+         <div class=" col col-6">
+          <label for="apellido">Apellido</label><input type="text"
+          placeholder="apellido" name = "apellido" class="form-control">
+         </div>
+       </div>
+      </div>
+        <br>
+      <div class="form-group">
+        <div class="row">
+          <div class=" col col-6">
+            <label for="">Email</label><input type="email"
+            placeholder="Email" name ="email" class="form-control">
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="form-group">
+        <div class="row">
+          <div class=" col col-6">
+            <label for="">Password</label><input type="password"
+        placeholder="password" name = "password" class = "form-control ">
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="form-group">
+       <div class="row">
+         <div class=" col col-6">
+          <label for="">Repeated Password</label><input type="password"
+          placeholder="Repite el Password" name ="password2" class="form-control">
+         </div>
+       </div>
+      </div>
+      <br>
+
+      <div class="row">
+        <div class="col col-6">
+          <a href="#">Olvidaste tu Contrseña?</a>
+          <div class="row">
+            <div class="col col-6">
+              <a href="#">Login</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="row">
+        <div class="col col-4">
+          <button class="btn btn-success">Register</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+<app-usuario *ngFor = "let persona of Personas"
+[persona ] = persona></app-usuario>
+</div>
+
+
+

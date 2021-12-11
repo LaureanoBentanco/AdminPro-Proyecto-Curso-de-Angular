@@ -1,0 +1,19 @@
+h1{
+  text-align: center;
+  color: black;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+h
+hr{
+  box-shadow:  2px 2px 5p black;
+
+}
+.set{
+  margin: auto;
+  border-radius: 20px;
+  text-align: center;
+}
+h4{
+  text-align: center;
+  color:green;
+}

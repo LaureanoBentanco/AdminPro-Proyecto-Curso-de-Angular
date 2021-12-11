@@ -1,0 +1,14 @@
+<div class="container styles">
+
+  <form  class ="form-row" >
+    <input type="text" placeholder="Nombre" name="nombre" class = "form- control col-2"
+    [(ngModel)] = "nombreInput">
+
+    <input type="text" placeholder="Apellido" name="nombre" class = "form- control col-2"
+    [(ngModel)] = "apellidoInput">
+
+
+      <button class = "btn btn-primary" (click) = "agregarPersona()" >Agregar</button>
+
+  </form>
+</div>

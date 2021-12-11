@@ -1,0 +1,13 @@
+
+h1{
+  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:royalblue;
+}
+hr{
+  height: 3px;
+  color:rgb(255, 0, 0);
+}
+.styles{
+  text-align: center;
+}
