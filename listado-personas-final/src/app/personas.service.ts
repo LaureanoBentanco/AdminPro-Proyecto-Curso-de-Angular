@@ -3,7 +3,8 @@ import { LoggingService } from './LoggingService.service';
 import { Injectable } from '@angular/core';
 import { DataService } from './data.service';
 
-@Injectable()
+@Injectable();
+
 export class PersonasService{
     personas: Persona[] = [];
 
@@ -12,7 +13,7 @@ export class PersonasService{
         ){}
 
     //Lo usamos para iniciar el arreglo, ya que ya es asincrono desde la BD
-    //Se inicializa desde el compoente PersonasComponent    
+    //Se inicializa desde el compoente PersonasComponent
     setPersonas(personas: Persona[]){
         this.personas = personas;
     }
@@ -24,7 +25,7 @@ export class PersonasService{
     agregarPersona(persona: Persona){
         this.loggingService.enviaMensajeAConsola("agregamos persona:" + persona.toString());
         if(this.personas == null){
-            this.personas = [];            
+            this.personas = [];
         }
         this.personas.push(persona);
         this.dataService.guardarPersonas(this.personas);
@@ -53,11 +54,11 @@ export class PersonasService{
         if(this.personas != null)
             //Guarda todas las personas nuevamente para regenerar indicess
             this.dataService.guardarPersonas(this.personas);
-      
+
     }
 
     eliminarPersona(index:number){
-        this.loggingService.enviaMensajeAConsola("eliminar persona con indice: " + index); 
+        this.loggingService.enviaMensajeAConsola("eliminar persona con indice: " + index);
         this.personas.splice(index,1);
         this.dataService.eliminarPersona(index);
         //Se vuelven a guardar todas las personas para que coincida el indice con el arreglo en memoria

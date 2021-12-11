@@ -20,11 +20,11 @@ export class PersonasService {
     return persona;
   }
   // tslint:disable-next-line: typedef
-  agregarPersona(persona: Persona) {
-    if (this.personas === null){
+  agregarPersona(personas: Persona) {
+    if (this.personas == null){
       this.personas = [];
     }
-    this.personas.push(persona);
+    this.personas.push(personas);
     this.dataServices.guardarPersonas(this.personas);
 
   }
