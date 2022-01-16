@@ -37,7 +37,7 @@ import { NoEncontradoComponent } from './componentes/no-encontrado/no-encontrado
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firestore, 'control-clientes'),
+    AngularFireModule.initializeApp(environment, 'control-clientes'),
     AngularFireModule,
     AngularFireAuthModule,
     FormsModule,

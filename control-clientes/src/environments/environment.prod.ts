@@ -1,3 +1,6 @@
+
+
+
 export const environment = {
   production: true,
 
@@ -7,8 +10,8 @@ export const environment = {
     projectId: "control-clientes-db8da",
     storageBucket: "control-clientes-db8da.appspot.com",
     messagingSenderId: "932662445037",
-    appId: "1:932662445037:web:c633d7d73444f65e3ddde4",
-    measurementId: "G-8T7BNBZRPN"
+    appId: "1:932662445037:web:b38d2aca656d44823ddde4",
+    measurementId: "G-8W79RTP1XZ"
 
 }
 
