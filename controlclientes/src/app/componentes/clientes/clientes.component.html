@@ -25,6 +25,7 @@
                   <th>#</th>
                   <th>Nombre</th>
                   <th>Saldo</th>
+                  <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -38,12 +39,38 @@
                 <td>
                   {{cliente.saldo|currency:'ARS':'$' }}
                 </td>
+                <td>
+                  <a routerLink="cliente/editar/{{cliente.id}}" class="btn btn-secondary">
+                    <i class="fa fa-angle-double-right"></i> editar
+                  </a>
+                </td>
               </tr>
             </tbody>
 
         </table>
       </div>
     </div>
+    <!--Tarjetas laterales-->
+    <div class="col-md-3">
+      <div class="card text-center bg-danger text-white mb-3">
+        <div class="card-body">
+          <h3>Saldo Total</h3>
+          <h4 class ="dispay-4">  {{getSaldoTotal()}} </h4>
+        </div>
+      </div>
+
+      <div class="card text-center bg-success text-white mb-3">
+        <div class="card-body">
+          <h3>Total Clientes</h3>
+          <h4 class ="dispay-4">
+            <i class ="fas fa-users"></i>{{Clientes?.length }}
+          </h4>
+
+        </div>
+      </div>
+
+    </div>   
+
   </div>
 </div>
 </section>
