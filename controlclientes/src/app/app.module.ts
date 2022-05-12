@@ -9,6 +9,7 @@ import {FormsModule} from '@angular/forms';
 import { AngularFirestoreModule, SETTINGS } from '@angular/fire/compat/firestore';
 
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CabeceroComponent } from './componentes/cabecero/cabecero.component';
@@ -21,6 +22,8 @@ import { ConfiguracionComponent } from './componentes/configuracion/configuracio
 import { NoEncontradoComponent } from './componentes/no-encontrado/no-encontrado.component';
 import { PiePaginaComponent } from './componentes/pie-pagina/pie-pagina.component';
 import { ClientesServicio } from './servicios/cliente.services';
+
+
 
 @NgModule({
   declarations: [

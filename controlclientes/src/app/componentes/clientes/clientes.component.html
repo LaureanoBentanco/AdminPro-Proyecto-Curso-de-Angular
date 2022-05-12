@@ -51,6 +51,7 @@
       </div>
     </div>
     <!--Tarjetas laterales-->
+
     <div class="col-md-3">
       <div class="card text-center bg-danger text-white mb-3">
         <div class="card-body">
@@ -84,29 +85,90 @@
         <h5 class="modal-title">Agregar Clientes</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form action="">
+
+      <flash-messages></flash-messages>
+
+      <form #clienteForm = "ngForm" (ngSubmit) ="agregar(clienteForm.form)">
         <div class="modal-body">
           <div class="form-group">
-            <label for="Nombre">Nombre</label><input type="text" name="nombre" placeholder="Nombre" class="form-control">
+            <label for="Nombre">Nombre</label>
+            <input type="text"
+            name="nombre"
+            placeholder="Nombre"
+            class="form-control"
+            #nombre = "ngModel"
+            [(ngModel)]="cliente.nombre"
+            [ngClass]="{'is-invalid': nombre.errors && nombre.touched}"
+            required
+            minlength="3"
+            >
+            <div [hidden]="!nombre.errors?.['required']" class="invalid-feedback">
+                Ecribe un Nombre
+            </div>
+            <div [hidden]="!nombre.errors?.['minlength']" class="invalid-feedback">
+                Ecribe un nombre más largo
+            </div>
           </div>
 
           <div class="form-group">
-            <label for="Apellido">Apellido</label><input type="text" name="apellido" placeholder="Apellido" class="form-control">
+            <label for="Apellido">Apellido</label>
+            <input type="text"
+            name="apellido"
+            placeholder="Apellido"
+            class="form-control"
+            #apellido ="ngModel"
+            [(ngModel)] = "cliente.apellido"
+            [ngClass]="{'is-invalid' : apellido.errors && apellido.touched}"
+            required
+            minlength="3"
+            >
+            <div [hidden]="!apellido.errors?.['required']" class="invalid-feedback">
+              Ecribe un Apellido
+          </div>
+          <div [hidden]="!apellido.errors?.['minlength']" class="invalid-feedback">
+              Ecribe un apellido más largo
+          </div>
           </div>
 
           <div class="form-group">
-            <label for="Email">Email</label><input type="email" name="email" placeholder="Email" class="form-control">
+            <label for="Email">Email</label><input type="email"
+            name="email"
+            placeholder="Email"
+            class="form-control"
+            #email = "ngModel"
+            [(ngModel)] = "cliente.email"
+            [ngClass]  = "{'is-invalid' : email.errors && email.touched}"
+            required
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            >
+            <div [hidden]="!email.errors?.['required']" class="invalid-feedback">
+              Ecribe un email
+          </div>
+          <div [hidden]="!email.errors?.['pattern']" class="invalid-feedback">
+              Ecribe un email correcto
+          </div>
           </div>
 
           <div class="form-group">
-           <label for="Saldo">Saldo</label> <input type="number" name="saldo" paceholder="Saldo" class="form-control">
+           <label for="Saldo">Saldo</label> <input type="number" name="saldo"
+           paceholder="Saldo"
+           class="form-control"
+           #saldo ="ngModel"
+           [(ngModel)] = "cliente.saldo"
+           [ngClass]="{'is-invalid' : saldo.errors && saldo.touched}"
+           required
+           >
+           <div [hidden]="!apellido.errors?.['required']" class="invalid-feedback">
+             Ecribe un Monto
+         </div>
+
           </div>
         </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
       </form>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Guardar</button>
-      </div>
+
     </div>
   </div>
 </div>
