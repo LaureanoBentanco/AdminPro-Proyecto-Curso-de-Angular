@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { ClientesServicio } from 'src/app/servicios/cliente.services';
 import { Cliente } from '../../modelo/cliente.model';
@@ -20,6 +21,8 @@ export class ClientesComponent implements OnInit {
     saldo: 0
 
   }
+  @ViewChild("clienteForm") clienteForm: NgForm;
+  @ViewChild("cerrarModal")  cerrarModal: ElementRef;
 
   constructor(private clienteservicio: ClientesServicio, private flashMessages: FlashMessagesService) { }
 
@@ -53,10 +56,15 @@ export class ClientesComponent implements OnInit {
     }
     else {
       // Agegamos el nuevo Cliente //
+      this.clienteservicio.agregarcliente(value);
+      this.clienteForm.resetForm();
+      this.cerrarVentana();
 
     }
 
   }
 
-
+  private cerrarVentana(){
+        this.cerrarModal.nativeElement.click();
+  }
 }
