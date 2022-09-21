@@ -1,0 +1,29 @@
+[33mcommit 95a6f2fe65c2055e6d226f47783b572ac3047e05[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: usuario <laureano.bentancor@gmail.com>
+Date:   Sat Jan 15 19:42:12 2022 -0300
+
+    Creacion de Compnentes y routing
+
+[33mcommit cc6f52444b27db2e1376c34dece11e3ec191a9fa[m
+Author: usuario <laureano.bentancor@gmail.com>
+Date:   Thu Jan 13 20:48:40 2022 -0300
+
+    App ya tiene integrado Bootstrap 5 y sus Dependencias correspondientes
+
+[33mcommit 57d4d277c440d93a8ca66bd1523ca3f7e66deb5a[m
+Author: usuario <laureano.bentancor@gmail.com>
+Date:   Thu Jan 13 09:49:19 2022 -0300
+
+    creacion de app con ng new
+
+[33mcommit 05b7beffb8e5e23d1914104c2bd258789cc87945[m
+Author: usuario <laureano.bentancor@gmail.com>
+Date:   Sat Dec 11 10:42:28 2021 -0300
+
+    " Guardando Ultimos cambios"
+
+[33mcommit e43c140d677c6bc8fbe464ad1f42bec115b572c1[m
+Author: usuario <laureano.bentancor@gmail.com>
+Date:   Sat Dec 11 10:41:17 2021 -0300
+
+    ("Lista de Personas Angular")

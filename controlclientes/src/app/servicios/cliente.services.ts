@@ -84,6 +84,5 @@ export class ClientesServicio {
 
     this.clienteDoc = this.db.doc(`clientes/${cliente.id}`);
     this.clienteDoc.delete();
-
     }
 }
